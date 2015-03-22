@@ -232,14 +232,21 @@ mirror_check() {
             
             eb2 "* "; eg "Testing Gentoo mirrors..."; sleep 0.5s
             
-            mirrorlist="http://gentoo.mirrors.tera-byte.com/ http://ftp.ucsb.edu/pub/mirrors/linux/gentoo/ http://mirrors.rit.edu/gentoo/"
-            mirrorlist="${mirrorlist} http://gentoo.localhost.net.ar/ http://www.las.ic.unicamp.br/pub/gentoo/ http://gd.tuwien.ac.at/opsys/linux/gentoo/"
-            mirrorlist="${mirrorlist} http://mirrors.telepoint.bg/gentoo/ http://gentoo.mirror.web4u.cz/ http://gentoo.wheel.sk/"
-            mirrorlist="${mirrorlist} http://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/ http://mirrors.xservers.ro/gentoo/"
-            mirrorlist="${mirrorlist} http://gentoo-euetib.upc.es/mirror/gentoo/ http://ftp.df.lth.se/pub/gentoo/ http://gentoo.kiev.ua/ftp/"
-            mirrorlist="${mirrorlist} http://mirrors.stuhome.net/gentoo/ ftp://mirrors.linuxant.fr/distfiles.gentoo.org"
-            mirrorlist="${mirrorlist} http://gentoo.bloodhost.ru/ http://ftp.kaist.ac.kr/gentoo/ http://mirror.isoc.org.il/pub/gentoo/"
-            mirrorlist="${mirrorlist} http://files.gentoo.gr/ http://gentoo.prz.rzeszow.pl/ http://ftp.dei.uc.pt/pub/linux/gentoo/"
+            #mirrorlist="http://gentoo.mirrors.tera-byte.com/ http://ftp.ucsb.edu/pub/mirrors/linux/gentoo/ http://mirrors.rit.edu/gentoo/"
+            #mirrorlist="${mirrorlist} http://gentoo.localhost.net.ar/ http://www.las.ic.unicamp.br/pub/gentoo/ http://gd.tuwien.ac.at/opsys/linux/gentoo/"
+            #mirrorlist="${mirrorlist} http://mirrors.telepoint.bg/gentoo/ http://gentoo.mirror.web4u.cz/ http://gentoo.wheel.sk/"
+            #mirrorlist="${mirrorlist} http://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/ http://mirrors.xservers.ro/gentoo/"
+            #mirrorlist="${mirrorlist} http://gentoo-euetib.upc.es/mirror/gentoo/ http://ftp.df.lth.se/pub/gentoo/ http://gentoo.kiev.ua/ftp/"
+            #mirrorlist="${mirrorlist} http://mirrors.stuhome.net/gentoo/ ftp://mirrors.linuxant.fr/distfiles.gentoo.org"
+            #mirrorlist="${mirrorlist} http://gentoo.bloodhost.ru/ http://ftp.kaist.ac.kr/gentoo/ http://mirror.isoc.org.il/pub/gentoo/"
+            #mirrorlist="${mirrorlist} http://files.gentoo.gr/ http://gentoo.prz.rzeszow.pl/ http://ftp.dei.uc.pt/pub/linux/gentoo/"
+            #US Lists
+            mirrorlist="http://mirror.usu.edu/mirrors/gentoo/ http://seal.cs.uni.edu/ http://gentoo.cites.uiuc.edu/pub/gentoo/"
+            mirrorlist="${mirrorlist} http://mirror.lug.udel.edu/pub/gentoo/ http://ftp.ucsb.edu/pub/mirrors/linux/gentoo/"
+            mirrorlist="${mirrorlist} http://gentoo.mirrors.tds.net/gentoo/ http://gentoo.llarian.net/ http://mirror.iawnet.sandia.gov/gentoo/"
+            mirrorlist="${mirrorlist} http://mirrors.rit.edu/gentoo/ http://gentoo.mirrors.pair.com/ http://gentoo.osuosl.org/ http://gentoo.netnitco.net/"
+            mirrorlist="${mirrorlist} http://lug.mtu.edu/gentoo/ http://gentoo.mirrors.hoobly.com/ http://www.gtlib.gatech.edu/pub/gentoo/"
+            mirrorlist="${mirrorlist} http://gentoo.mirrors.easynews.com/linux/gentoo/"
             
             mno="1"
             for mrr in ${mirrorlist}
@@ -1333,9 +1340,9 @@ get_tarball() {
     
     while read lt_line
     do
-        if [ "${lt_line}" != "^#*" ]; then
-            date="${lt_line:0:8}"
-            [[ "${lt_line}" == "${date}/stage3-${arch}-${date}.tar.bz2" ]] && tarball="stage3-${arch}-${date}.tar.bz2" && break
+    	date="${lt_line:0:8}"
+        if [ "${lt_line}" == *"${date}/stage3-${arch}-${date}.tar.bz2"* ]; then 
+        	tarball="stage3-${arch}-${date}.tar.bz2" && break
         fi
     done < "${lt}"
     
