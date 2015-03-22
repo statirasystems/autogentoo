@@ -4,32 +4,20 @@ Auto Gentoo
 Auto Gentoo is free software distributed under the terms of the MIT license.
 For license details, see LICENSE.
 
----------------------------------------------------------------------
 WARNING:
-THIS MAY BREAK AT NY TIME DUE TO CHANGES IN GENTOO. PLEASE TEST BEFORE
-USING IN PRODUCTION.
----------------------------------------------------------------------
+THIS MAY BREAK AT NY TIME DUE TO CHANGES IN GENTOO.
+PLEASE TEST BEFORE USING IN PRODUCTION.
 
 Bash script for a more automated Gentoo Linux installation
 
-"Auto Gentoo" is a bash script, which is basically a combination of
-Gentoo Handbook steps, that installs Gentoo Linux from a stage3 tarball.
-The overall procedure is either unattended, everything is handled by script, or fill a you go.
-Installation includes "localization (English, Brazilian and Turkish),
-kernel compilation, X server setup, desktop environment setup (Xfce)"
-and more. These steps are enabled or disabled according to a profile.
+"Auto Gentoo" is a bash script that installs Gentoo Linux from a stage3 tarball. We are using bash and the list of required programs to free up which distro you use to install with.
 
-Profile is a simple text file which has the necessary options, settings
-etc. for the installation. (Profile must be named as "profile") With
-a proper profile, it is possible to have a basic system (without X) or
-a ready to use Xfce desktop with a few key strokes.
+The overall procedure is either unattended, everything is handled by script, or fill a you go, user required. These steps are enabled or disabled according to a "profile" file.
 
-"Easy Gentoo" was tested on lots of machines with different profiles.
-Many successful installations were made. Hope it becomes a time-saver
-for you. Happy compiling!
+Profile is a simple text file which has the necessary options, settings etc. for the installation. (Profile must be named as "profile") With a proper profile, it is possible to have a basic system (without X) or a ready to use Xfce desktop with a few key strokes.
 
 *** IMPORTANT NOTES ***
-- Easy Gentoo doesn't do partitioning, you need to do that by yourself. It formats and mounts your selection of existing partitions.
+- Easy Gentoo doesn't do partitioning, you need to do that by yourself. It formats and mounts your selection of existing partitions. But will
 - Using a capable intallation media which has more filesystem utilities, Easy Gentoo can format, mount, configure partitions for these filesystems: "btrfs, ext2, ext3, ext4, ntfs, reiserfs, xfs"
 - Localization is based on your "keymap". "us" is for English, "br" is for Brazilian, "trq" and "trf" are for Turkish.
 - A temporary swap file with 1 GB size is created as a precaution if root partition is bigger than 8 GB
