@@ -1,4 +1,21 @@
-This is a list of features that are requested to be added or are on my roadmap (in my head lol).
+This is a list of features that are requested to be added or are on my roadmap (in my head lol). It is split into 2 primary sections. The first is what I am doing right now. The second is stuff I want to add or change.
+
+Section 1
+
+1. Split the large file into smaller more managable sizes. I will release an all in one file as well for easier downloading and running however, it will be generated and is not a priority until we get a functioning split one.
+    Structure is as follows
+        lib - this is the primary storage of the referenced functions of the script
+        locale - this is where the localization files will be stored.
+        kernel - this is where the kernel configurations will be stored
+        config - this is where the configurations will be stored
+        
+        autogentoo - this is the primary script file for running.
+        LICENSE - this is literally the license
+        README.md - this is a general overview followed by the actual documentation. Except for the todo/roadmap as I am in the early stages.
+        steps.md - the notes on the functions and what order they come in. It is modeled after Gentoo Handbook and easygentoo.
+        todo.md - the todo/roadmap text document
+
+Section 2
 
 Since we will have two versions, manual and auto, there will be 3 sections, one for auto, one for manual, and another for both.
 
