@@ -1,21 +1,20 @@
-Easy Gentoo
+Auto Gentoo
 ===========
 
-Easy Gentoo is free software distributed under the terms of the MIT license.
+Auto Gentoo is free software distributed under the terms of the MIT license.
 For license details, see LICENSE.
 
 ---------------------------------------------------------------------
 WARNING:
-THERE MAYBE SOME MISTAKES OR PARTS THAT NEED IMPROVING.
-I RECOMMEND YOU TO TEST THIS SCRIPT IN A VIRTUAL ENVIRONMENT FIRST.
-DON'T FORGET TO CROSS FINGERS WHILE USING ON A REAL MACHINE :)
+THIS MAY BREAK AT NY TIME DUE TO CHANGES IN GENTOO. PLEASE TEST BEFORE
+USING IN PRODUCTION.
 ---------------------------------------------------------------------
 
-Bash script for easy Gentoo Linux installation
+Bash script for a more automated Gentoo Linux installation
 
-"Easy Gentoo" is a bash script, which is basically a combination of
+"Auto Gentoo" is a bash script, which is basically a combination of
 Gentoo Handbook steps, that installs Gentoo Linux from a stage3 tarball.
-The overall procedure is unattended, everything is handled by script.
+The overall procedure is either unattended, everything is handled by script, or fill a you go.
 Installation includes "localization (English, Brazilian and Turkish),
 kernel compilation, X server setup, desktop environment setup (Xfce)"
 and more. These steps are enabled or disabled according to a profile.
