@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#############################################################################
+#   Application:            AutoGentoo
+#   By:                     William Moore
+#   Version:                0.1
+#   Copyright:              2015
+#   License:                GPLv3   http://opensource.org/licenses/GPL-3.0
+#############################################################################
+
+#   Load and attach config, lib, and locale files
+dir="${BASH_SOURCE%/*}"
+if [[ ! -d "$dir" ]]; then dir="$PWD"; fi
+
+# Lib files
+. "$DIR/incl.sh"
+. "$DIR/main.sh"

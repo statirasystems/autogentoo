@@ -1,0 +1,21 @@
+#############################################################################
+#   Library:                Security   
+#   Application:            AutoGentoo
+#   By:                     William Moore
+#   Lib Version:            0.1
+#   Copyright:              2015
+#   License:                GPLv3   http://opensource.org/licenses/GPL-3.0
+#############################################################################
+
+
+# check if the config file contains something we don't want
+#   it is taken from an article here:http://wiki.bash-hackers.org/howto/conffile
+security.cleanconfig(){
+    if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile"; then
+      echo "Config file is unclean, cleaning it..." >&2
+      
+      # filter the original to a new file
+      egrep '^#|^[^ ]*=[^;&]*'  "$configfile" > "$configfile_secured"
+      configfile="$configfile_secured"
+    fi
+}

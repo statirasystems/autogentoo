@@ -1,5 +1,15 @@
-check if the script is located in /root directory
-check if there is a profile
+#New
+1. Get Script Location
+2. Check for Configuration(s)
+    a. if not ask if defaults are ok or if they want full selection
+    b. if yes, check for how many, if in headless mode
+        1. if not in headless mode, check for priorty feild.
+            a. load according to priority feild then, if not present or the same then alphabetically
+3. Get Installing OS distro and version
+4.
+
+#$! OLD
+
 check for necessary filesystem utilities, according to filesystems selected for partitions in profile, that should be in the installation media and take a note to emerge them during install
 check if necessary commands/utilities are available in the installation media
 check internet connection
