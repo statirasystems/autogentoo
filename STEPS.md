@@ -6,14 +6,35 @@
         1. if not in headless mode, check for priorty feild.
             a. load according to priority feild then, if not present or the same then alphabetically
 3. Get Installing OS distro and version
-4.
+4. Verify tools are available
+    a. if not check if it can be installed
+5. Check for network connection
+    a. if not attempt to create a connection
+        1. first via eth#
+        2. if no eth# then scan for wireless and attempt connection with settings in configuration.
+6. Construct all settings, software configs, gentoo settings based on scans of the system and options selected in the config(s)
+7. Install Gentoo
+    . Set Time/Date UTC then apply Timezone via timezone-data (timedatectl)
+    a. Preparing Disks
+        1. Identify Disks
+        2. fdisk or parted (depending on msdos or gpt and which tool is available)
+            a. based on config or asking for configuration
+                1. diskconfig.tmp file until setting complete
+                2. Get Device, boot flag, start finish, ID (flag id), name (for fstab), filesystem
+                3. gpt or msdos
+    b. Installing installation files
+    c. Installing Base system
+    d. Configuring Kernel
+    e. Configuring System
+    f. Installing System Tools
+    g. Configuring Bootloader
+    h. Finalize Install
+    i. reboot
+8. Post Install Functions and Configuration
 
 #$! OLD
 
-check for necessary filesystem utilities, according to filesystems selected for partitions in profile, that should be in the installation media and take a note to emerge them during install
-check if necessary commands/utilities are available in the installation media
-check internet connection
-extract settings from profile
+
 create two files, one for formatting and one for mounting partitions
 create fstab template
 check number of cpu cores

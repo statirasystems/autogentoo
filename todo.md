@@ -35,6 +35,8 @@ Both
 - use flag optimization based on selected packages
 - kernel optimization
 
+- include a way for user to store there own script commands in a variable or to attach their own scripts. Perhaps after each function run an exec varible with a name that identifies it with that step. Thus allowing for a user to incorporate functions they need to run on thier systems. ie echo $(post_functionname_scriptvariable) where the function
+
 Manual
 - config mode or runtime mode. Config mode is to generate a configuration file for other installs. Runtime executes the actul install
 

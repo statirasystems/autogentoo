@@ -10,7 +10,7 @@
 
 # check if the config file contains something we don't want
 #   it is taken from an article here:http://wiki.bash-hackers.org/howto/conffile
-security.cleanconfig(){
+security_cleanconfig(){
     if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile"; then
       echo "Config file is unclean, cleaning it..." >&2
       
