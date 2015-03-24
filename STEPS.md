@@ -32,6 +32,27 @@
     i. reboot
 8. Post Install Functions and Configuration
 
+
+#Literal
+start
+    check for "left off at"
+        if yes load stored variables and skip to section
+    initilase default variables
+    store dir
+    load lib
+    check for configurations
+    get system info
+    check if network initlized
+    check for tools
+        if not try to install
+    scan for current state
+        if what stage, if any
+        if portage
+        hardware installed
+            identify tags
+    install basic
+    install advance/post install
+    
 #$! OLD
 
 
