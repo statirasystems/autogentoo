@@ -31,6 +31,7 @@
     . "$dir/lib/gentoo_network"
     . "$dir/lib/locale"
     . "$dir/lib/mirror
+    . "$dir/lib/colorscheme"
     
 #Load Locale/Language Files
     envlanguage="printenv | grep 'LANG' | cut -c6-10"
@@ -43,3 +44,8 @@ test_mirrors
 
 #Switching mirror due to problems 
 #switch_mirror
+
+# Main run command from original
+install_step="${1}"
+start
+exit 0
