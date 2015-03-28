@@ -30,6 +30,16 @@
     . "$dir/lib/time"
     . "$dir/lib/gentoo_network"
     . "$dir/lib/locale"
+    . "$dir/lib/mirror
     
 #Load Locale/Language Files
     envlanguage="printenv | grep 'LANG' | cut -c6-10"
+    
+
+#Mirrors
+get_mirrorlist
+clean_mirrorlist
+test_mirrors
+
+#Switching mirror due to problems 
+#switch_mirror

@@ -51,6 +51,8 @@ start
         hardware installed
             identify tags
     install basic
+        mirrorselection
+        
     install advance/post install
     
 #$! OLD
