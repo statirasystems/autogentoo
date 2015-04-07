@@ -32,17 +32,17 @@
     . "$dir/lib/locale"
     . "$dir/lib/mirror
     . "$dir/lib/colorscheme"
-    
+
 #Load Locale/Language Files
     envlanguage="printenv | grep 'LANG' | cut -c6-10"
-    
+
 
 #Mirrors
 get_mirrorlist
 clean_mirrorlist
 test_mirrors
 
-#Switching mirror due to problems 
+#Switching mirror due to problems
 #switch_mirror
 
 # Main run command from original
